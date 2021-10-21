@@ -63,14 +63,15 @@ function createNewAnimal(body, animalsArray) {
     return animal;
 }
 
-function validateAnimal(animal) {
-    if (!animal.name || typeof animal.name !== 'string') {
+function
+ validateAnimal(animal) {
+    if (!animal.name || typeof animal.name !== "string") {
         return false;
     }
-    if (!animal.species || typeof animal.species !== 'string') {
+    if (!animal.species || typeof animal.species !== "string") {
         return false;
     }
-    if (!animal.diet || typeof animal.diet !== 'string') {
+    if (!animal.diet || typeof animal.diet !== "string") {
         return false;
     }
     if (!animal.personalityTraits || !Array.isArray(animal.personalityTraits)) {
@@ -105,7 +106,7 @@ app.post('/api/animals', (req, res) => {
     //add animal to json file and animals array in this function
     const animal = createNewAnimal(req.body, animals);
     // re.body is where our incoming content will be 
-    console.log(req.body);
+    
     res.json(animal)
     }
 });
