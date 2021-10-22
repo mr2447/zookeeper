@@ -65,18 +65,18 @@ function createNewAnimal(body, animalsArray) {
 
 function
  validateAnimal(animal) {
-    if (!animal.name == null) { /*|| typeof animal.name !== "string") {*/
+    if (!animal.name || typeof animal.name !== "string") {
         return false;
     }
-    if (!animal.species == null) {/*|| typeof animal.species !== "string") {*/
+    if (!animal.species || typeof animal.species !== "string") {
         return false;
     }
-    if (!animal.diet == null) {/*|| typeof animal.diet !== "string") {*/
+    if (!animal.diet || typeof animal.diet !== "string") {
         return false;
     }
-    // if (!animal.personalityTraits || !Array.isArray(animal.personalityTraits)) {
-    //     return false;
-    // }
+    if (!animal.personalityTraits || !Array.isArray(animal.personalityTraits)) {
+        return false;
+    }
     console.log(animal.name)
     console.log(typeof animal.name)
     return true;
@@ -99,14 +99,18 @@ app.get('/api/animals/:id', (req, res) => {
     
 })
 app.post('/api/animals', (req, res) => {
+    console.log("request body 1", req.body)
     // set id based on what the next indexof the array will be
     req.body.id = animals.length.toString();
-
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    console.log("request body 2", req.body)
     if (!validateAnimal(req.body)) {
         res.status(400).send('The animal is not properly formatted.');
     } else {
     //add animal to json file and animals array in this function
     const animal = createNewAnimal(req.body, animals);
+    console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    console.log("animal", animal)
     // re.body is where our incoming content will be 
     
     res.json(animal)
