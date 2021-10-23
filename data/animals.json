@@ -198,6 +198,15 @@
         "peacefull"
       ],
       "id": "26"
+    },
+    {
+      "name": "Karen",
+      "species": "frog",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "27"
     }
   ]
 }
