@@ -207,6 +207,15 @@
         "hungry"
       ],
       "id": "27"
+    },
+    {
+      "name": "Kare",
+      "species": "dear",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "goofy"
+      ],
+      "id": "28"
     }
   ]
 }
