@@ -216,6 +216,16 @@
         "goofy"
       ],
       "id": "28"
+    },
+    {
+      "name": "Kare",
+      "species": "dog",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "loving",
+        "goofy"
+      ],
+      "id": "29"
     }
   ]
 }
