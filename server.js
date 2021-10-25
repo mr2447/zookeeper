@@ -15,11 +15,6 @@ app.use(express.static('public'))
 app.use('/api', apiRoutes);
 app.use('/',htmlRoutes);
 
-
-
-function handleAnimalSubmit() {
-
-}
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 })
